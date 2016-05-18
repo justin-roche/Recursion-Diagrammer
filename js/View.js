@@ -18,13 +18,14 @@
 		}
 
 
-		function display(f,a){
+		function display(f,args){
 			var rspy = new app.Spy(f);
 			//splat the args with partial application because default is separate args
+			
 			var bound = rspy.run.bind(rspy);
 
-			a.forEach(function(v,i){
-				bound = rspy.run.bind(rspy,v);
+			args.forEach(function(v,i){
+				bound = bound.bind(rspy,v);
 			});
 			bound(); 
 

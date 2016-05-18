@@ -1,0 +1,16 @@
+{
+  "name": "recursion_diagrammer",
+  "version": "0.0.1",
+  "description": "Diagram recursive functions",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "mocha": "^2.4.5"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "author": "",
+  "license": "ISC",
+ 
+}

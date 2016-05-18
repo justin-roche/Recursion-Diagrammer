@@ -4,7 +4,7 @@
 	function PreProcessor(inputF){
 
 		var stringFunc = inputF;
-		stringName = getName(); 
+		var stringName = getName(); 
 		replaceDeclaration();
 		replaceInner(); 
 
@@ -17,10 +17,10 @@
 
 		function getName(){
 			try{
-				let declarationReg = new RegExp(/^.+?\(/);			
-				let declaration = stringFunc.match(declarationReg)[0];
-				let titleReg = new RegExp(/function(.+)\(/,"i");
-				let name = declaration.match(titleReg)[1].trim();
+				var declarationReg = new RegExp(/^.+?\(/);			
+				var declaration = stringFunc.match(declarationReg)[0];
+				var titleReg = new RegExp(/function(.+)\(/,"i");
+				var name = declaration.match(titleReg)[1].trim();
 				if(name.length === 0){throw Error;}
 				return name;}
 			catch(e){
@@ -29,7 +29,7 @@
 		};
 		
 		function replaceDeclaration(){
-			let declarationReg = new RegExp(/^.+?\(/);	
+			var declarationReg = new RegExp(/^.+?\(/);	
 			stringFunc = stringFunc.replace(declarationReg,'function _evalFunc(');							
 		};
 

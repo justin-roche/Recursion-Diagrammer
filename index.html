@@ -1,0 +1,55 @@
+<!DOCTYPE>
+<html>
+	
+	<head>
+		<meta charset="UTF-8">
+		
+			<link rel="stylesheet" href="css/jquery.jOrgChart.css"/>
+ 			<link rel='stylesheet' href='lib/bootstrap-3.3.6-dist/css/bootstrap.css'/>
+			<link rel='stylesheet' href='css/rSpy.css'/>
+
+			<script src="lib/jquery/dist/jquery.js"></script>
+			<script src='lib/bootstrap-3.3.6-dist/js/bootstrap.js'></script>
+			<script type="text/javascript" src="lib/jquery.jOrgChart.js"></script>
+
+			<script src="js/diagrammer.js"></script>
+			<script src="js/Spy.js"></script>
+			<script src="js/PreProcessor.js"></script>
+			<script src="js/ListConverter.js"></script>
+
+		
+	</head>
+
+<body >
+
+<div class= "container col-xs-12 well" style="height: 70%; padding-bottom:20px; overflow:scroll">
+
+<div id="results"  style="overflow: display">
+	 
+
+</div>
+
+</div>
+
+
+<div class="col-xs-12 well" style="position: fixed; bottom: 0; height: 25%; float: left">
+    <div class="row">
+      <div class="well col-xs-4 col-sm-6">
+ 			<button class="btn-default col-xs-6" style="height:50%;">Reset</button>
+        		<button id="run" class="btn-primary col-xs-6" style="height:50%;">Run</button>
+        	
+      </div>
+      <div class="well col-xs-8 col-sm-6" style="padding: 0px;">
+     	<textarea id='function' class="col-xs-12" style="height:50%;" placeholder="enter function...">function f(a){if(a===0){return 1;}else{return f(a-1) + f(a-1);};}</textarea>
+		<textarea id='args' class="col-xs-12" style="height:50%;" placeholder="enter comma-separated arguments">3</textarea>
+        
+      </div>
+      
+    </div>
+  </div>
+	
+	<script src="js/View.js"></script>
+</body>
+
+
+</html>

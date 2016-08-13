@@ -7,3 +7,7 @@ body {
 #input{
 /*  background-color: #99DEAB;
 */}
+
+.jOrgChart .node {
+	height: 100%;
+}

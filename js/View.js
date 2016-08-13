@@ -9,10 +9,11 @@
 			$('#run').on('click', function(e){
 					clearDisplay();
 					var fString = $('#function').val();
-					var preProcessor = new app.PreProcessor(fString);
-					fString = preProcessor.stringFunc; 
-
-					var fArgs = $('#args').val().split(',');
+					var preProcessor = new app.PreProcessor();
+					fString = preProcessor.body(fString); 
+					var fArgs = $('#args').val();
+					fArgs = preProcessor.args(fArgs);
+					
 					display(fString,fArgs);
 			});
 		}
@@ -25,7 +26,7 @@
 			var bound = rspy.run.bind(rspy);
 
 			args.forEach(function(v,i){
-				bound = bound.bind(rspy,v);
+				bound = bound.bind(rspy,eval(v));
 			});
 			bound(); 
 

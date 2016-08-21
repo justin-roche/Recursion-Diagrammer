@@ -30,8 +30,8 @@
 				var selectedFn = app.functions[selected][0];
 				var selectedArgs = app.functions[selected][1];
 				$('#function').val(selectedFn.toString());	
-				if (typeof selectedArgs === 'string'){
-					selectedArgs = "'" + selectedArgs + "'";
+				if (typeof selectedArgs != 'string'){
+					throw new Error('default functions need arguments as strings')
 				}
 				$('#args').val(selectedArgs.toString());
 				//display();	
@@ -67,7 +67,6 @@
 				$('#rspy').remove();
 				$('#results').empty();
 				//$('#results').remove();
-
 		}
 
 	}
